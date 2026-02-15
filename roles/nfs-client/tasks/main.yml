@@ -8,16 +8,16 @@
   loop:
     - nfs-common
 
-- name: Create a directory under opt for the mount point
+- name: Create mount point directory
   file:
-    path: /opt/remote
+    path: /mnt/nas
     state: directory
     mode: '0775'
 
 - name: Mount the nfs volume on the client
   mount:
-    src: lab01.lab:/opt/plex
-    path: /opt/remote
-    opts: nolock,intr
+    src: prod-nas-01:/volume1/media
+    path: /mnt/nas
+    opts: defaults,nolock,intr
     state: mounted
     fstype: nfs
