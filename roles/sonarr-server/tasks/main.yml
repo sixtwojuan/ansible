@@ -1,4 +1,0 @@
----
-# tasks file for sonarr-servers
-
-- include_tasks: sonarr.yml

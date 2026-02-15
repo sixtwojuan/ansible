@@ -1,5 +1,0 @@
----
-# tasks file for prowlarr-servers
-
-# bootstrap prowlarr
-- include_tasks: prowlarr.yml

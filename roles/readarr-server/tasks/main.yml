@@ -1,5 +1,0 @@
----
-# tasks file for readarr-servers
-
-# bootstrap readarr
-- include_tasks: readarr.yml
