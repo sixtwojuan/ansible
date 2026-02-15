@@ -5,11 +5,7 @@
 plex01
 
 [lab]
-lab01
-lab02
-lab03
-lab04
-lab05
+ubuntu-docker-01
 
 [pihole]
 pihole01
@@ -20,3 +16,9 @@ docker02
 
 [bastion]
 jump01
+
+[elk]
+192.168.5.241
+
+[lxc]
+192.168.5.184
