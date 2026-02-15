@@ -21,3 +21,4 @@
     opts: defaults,nolock,intr
     state: mounted
     fstype: nfs
+  when: inventory_hostname == "ubuntu-docker-01"
