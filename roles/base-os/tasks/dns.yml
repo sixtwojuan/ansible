@@ -2,19 +2,18 @@
 
 - name: It's not DNS
   file:
-   path: "/etc/resolv.conf"
-   state: absent
+    path: /etc/resolv.conf
+    state: absent
 
 - name: There's no way it's DNS
   copy:
-    src: resolv.conf
-    dest: /run/systemd/resolve/resolv.conf
-    owner: systemd-resolve
-    group: systemd-resolve
+    content: |
+      nameserver 127.0.0.1
+    dest: /etc/resolv.conf
     mode: '0644'
 
 - name: It was DNS
-  file:
-    src: "/run/systemd/resolve/resolv.conf"
-    dest: "/etc/resolv.conf"
-    state: link
+  systemd:
+    name: systemd-resolved
+    state: stopped
+    enabled: false

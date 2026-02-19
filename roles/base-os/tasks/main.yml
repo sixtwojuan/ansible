@@ -7,8 +7,8 @@
 # Setup base packages for os
 - include_tasks: packages.yml
 
-# Configure local dns - moving over to dns server
-#- include_tasks: dns.yml
+# Disable systemd-resolved for pihole
+- include_tasks: dns.yml
 
 # install tailscale
-- include_tasks: tailscale.yml
+#- include_tasks: tailscale.yml
